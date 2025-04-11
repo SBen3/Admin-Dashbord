@@ -63,9 +63,10 @@ function Analytics() {
         animate={{ translateY: 0 }}
         transition={{ duration: 1 }}
       >
-        {overviewData.map((card) => {
+        {overviewData.map((card , index) => {
           return (
             <AnalyticsCard
+              key={index}
               name={card.name}
               icon={card.icon}
               value={card.value}

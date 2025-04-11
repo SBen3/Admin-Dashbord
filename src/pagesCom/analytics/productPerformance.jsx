@@ -1,5 +1,4 @@
 import React from "react";
-import { color, motion } from "motion/react";
 import {
   BarChart,
   Bar,

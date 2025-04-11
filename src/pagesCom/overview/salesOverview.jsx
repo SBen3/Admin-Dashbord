@@ -1,15 +1,5 @@
 import React from "react";
-import { motion } from "motion/react";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
+import Linechart from "../../common/lineChart";
 const salesData = [
   { name: "Jul", sales: 4200 },
   { name: "Aug", sales: 3800 },
@@ -24,20 +14,19 @@ const salesData = [
   { name: "May", sales: 7100 },
   { name: "Jun", sales: 7500 },
 ];
-function SalesOverview({coloro}) {
+function SalesOverview({ coloro }) {
   return (
     <div className={`w-[100%] ${coloro} rounded-2xl border-slate-200 border-1`}>
       <p className="m-5 font-bold text-xl">Sales Overview</p>
-      <ResponsiveContainer width={"100%"} height={300} className={""}>
-        <LineChart data={salesData} >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Line dataKey="sales" type="monotone"/>
-          <Tooltip itemStyle={{color:'#3182bd'}} contentStyle={{backgroundColor:'white' ,color:"#3182bd" , borderRadius:'5px', padding:"10px"}}/>
-          <Legend />
-        </LineChart>
-      </ResponsiveContainer>
+      <Linechart
+        width={"100%"}
+        height={300}
+        data={salesData}
+        name={"name"}
+        value={"sales"}
+        type={"monotone"}
+        strokeWidth={3}
+      />
     </div>
   );
 }

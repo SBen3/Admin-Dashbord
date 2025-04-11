@@ -82,9 +82,10 @@ function Sidebar() {
         </motion.div>
         <div className={`ml-4 mt-12 fixed -translate-x-1 `}>
           <ul>
-            {SIDEBAR_ITEMS.map((item) => {
+            {SIDEBAR_ITEMS.map((item , index) => {
               return (
                 <motion.li
+                  key={index}
                   initial={{ translateX: 20 }}
                   animate={{ translateX: 0 }}
                   whileTap={{ opacity: 0, transition: { duration: 0.7 } }}

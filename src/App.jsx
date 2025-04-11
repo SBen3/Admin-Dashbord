@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link} from "react-router";
 import "./App.css";
-import { motion } from "motion/react";
 import Sidebar from "./sidebar/sidebar";
 import Overview from "./pages/overview.jsx";
 import Product from "./pages/product.jsx";

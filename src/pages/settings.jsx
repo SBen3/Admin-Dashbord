@@ -41,9 +41,9 @@ function Settings() {
           </div>
         </SettingCard>
         <SettingCard icon={<Bell />} title={"Notification"}>
-          {notificationData.map((data) => {
+          {notificationData.map((data , index) => {
             return (
-              <div className="flex justify-between ml-5 mr-5 max-sm:flex-col max-sm:gap-5 max-sm:items-center">
+              <div key={index} className="flex justify-between ml-5 mr-5 max-sm:flex-col max-sm:gap-5 max-sm:items-center">
                 <p>{data.title}</p>
                 <Toggle state={data.state}/>
               </div>
@@ -110,9 +110,9 @@ function Settings() {
         <div className="relative flex flex-col gap-10 text-white p-10 m-10 w-[70%] h-auto border-1 border-red-900 rounded-2xl cursor-default">
           <div className="w-full h-full -p-5  -m-10 absolute bg-red-500 opacity-80 rounded-2xl z-30"></div>
           <div className="flex gap-5 z-40">
-            <p className="text-amber-600">
+            <div className="text-amber-600">
               <Trash color="#8f0202" />
-            </p>
+            </div>
             <h2 className="font-medium text-xl -mt-0.5">Delete Account</h2>
           </div>
           <p className="z-40 ">

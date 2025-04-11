@@ -44,7 +44,7 @@ function SalesByChannel({coloro}) {
           />
             <Bar dataKey="value"  fill="gray">
           {SALES_CHANNEL_DATA.map((entry , index)=>(
-            <Cell fill={COLORS[index]} />
+            <Cell key={index} fill={COLORS[index]} />
           ))}
           </Bar>
         </BarChart>

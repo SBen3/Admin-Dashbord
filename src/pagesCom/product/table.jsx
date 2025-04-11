@@ -65,7 +65,7 @@ function Table() {
     <div>
       <div className="flex justify-between max-md:flex-col ">
         <p className="pl-5 pt-1 text-2xl self-center">Product List</p>
-        <p className="relative flex justify-around self-center gap-2 h-12 m-3">
+        <div className="relative flex justify-around self-center gap-2 h-12 m-3">
           <Search className="absolute text-slate-700 top-4 left-5 w-4 h-4 ml-0 " />
           <input
             type="text"
@@ -76,7 +76,7 @@ function Table() {
               setSearchItem(e.target.value);
             }}
           />
-        </p>
+        </div>
       </div>
       <table className="flex flex-col justify-between w-full overflow-auto cursor-default">
         <tr className="flex justify-between border-b-1 border-slate-400 p-6 min-w-[800px]">
@@ -93,7 +93,7 @@ function Table() {
             : item.name.toLowerCase().includes(searchItem) ||
                 item.category.toLowerCase().includes(searchItem);
         }).map((item, index) => (
-          <tr className="flex justify-between border-t-1 border-slate-400 p-6 min-w-[800px]">
+          <tr key={index} className="flex justify-between border-t-1 border-slate-400 p-6 min-w-[800px]">
             <td className="flex gap-2 w-[20%]">
               {item.icon} {item.name}
             </td>
