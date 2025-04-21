@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link} from "react-router";
+import { BrowserRouter as Router, Routes, Route} from "react-router";
 import "./App.css";
 import Sidebar from "./sidebar/sidebar";
 import Overview from "./pages/overview.jsx";

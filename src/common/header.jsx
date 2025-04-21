@@ -1,12 +1,11 @@
 import React, { useState , useContext } from "react";
 import { theme } from "./useContext";
-import { colors } from "./useContext";
 import { Sun, Moon } from "lucide-react";
 function Header({ title }) {
 const {change , changeFunc} = useContext(theme)
   return (
     <div>
-      <div className={`fixed z-10 ${change?"bg-gradient-to-r from-blue-100 to-violet-100" : "bg-indigo-950 text-white"} border-x-2 border-slate-400 w-full py-5 px-15 text-2xl cursor-default tracking-wider`} >
+      <div className={`fixed z-10 ${change?"bg-gradient-to-r from-blue-100 to-violet-100" : "bg-indigo-950 text-white"} border-x-2 border-slate-700 w-full py-5 px-15 text-2xl cursor-default tracking-wider`} >
         {title}
       </div>
      
