@@ -7,7 +7,10 @@ import Toggle from "../common/toggle";
 import { notificationData } from "../pagesCom/settings/dataSetting";
 import { useContext } from "react";
 import { theme } from "../common/useContext.jsx";
-import { colors } from "../common/useContext.jsx";
+import profile from "../../src/assets/profile.jpg"
+import gmail from "../../src/assets/gmail.png"
+import facebook from "../../src/assets/facebook.png"
+import linkedin from "../../src/assets/linkedin.png"
 
 function Settings() {
     const {change , changeFunc} = useContext(theme)
@@ -26,7 +29,7 @@ function Settings() {
           <div className="flex flex-col gap-10 ">
             <div className="flex gap-5 max-sm:flex-col max-sm:items-center">
               <img
-                src="src/assets/lachlan-dempsey-6VPEOdpFNAs-unsplash.jpg"
+                src={profile}
                 alt=""
                 className="w-20 h-20 rounded-full"
               />
@@ -64,7 +67,7 @@ function Settings() {
             <div className="flex gap-4 ml-5 mr-5 cursor-default max-sm:flex-col">
               <div className="flex gap-5 w-full max-sm:justify-center ">
                 <img
-                  src="src/assets/gmail.png"
+                  src={gmail}
                   alt=""
                   className="w-[30px] h-[25px] "
                 />
@@ -78,7 +81,7 @@ function Settings() {
           <div className="flex gap-4 ml-5 mr-5 max-sm:flex-col">
             <div className="flex gap-5 w-full max-sm:justify-center ">
               <img
-                src="src/assets/facebook.png"
+                src={facebook}
                 alt=""
                 className="w-[30px] h-[25px] "
               />
@@ -92,7 +95,7 @@ function Settings() {
           <div className="flex gap-4 ml-5 mr-5 max-sm:flex-col">
             <div className="flex gap-5 w-full max-sm:justify-center ">
               <img
-                src="src/assets/linkedin (1).png"
+                src={linkedin}
                 alt=""
                 className="w-[30px] h-[25px] "
               />
@@ -128,3 +131,5 @@ function Settings() {
 }
 
 export default Settings;
+
+
